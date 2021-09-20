@@ -199,3 +199,56 @@ import re
 txt = "The rain in Spain"
 xq = re.search(r"\bS\w+", txt)
 print(xq.group())
+
+
+try:
+  print(j)
+except:
+  print("An exception occurred")
+
+try:
+  print(m)
+except NameError:
+  print("Variable m is not defined")
+except:
+  print("Something else went wrong")  
+
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+
+try:
+  print(cv)
+except:
+  print("Something went wrong")
+finally:
+  print("The 'try except' is finished") 
+
+try:
+  f = open("demofile.txt")
+  try:
+    f.write("Lorum Ipsum")
+  except:
+    print("Something went wrong when writing to the file")
+  finally:
+    f.close()
+except:
+  print("Something went wrong when opening the file")  
+
+# xd = -1
+# if xd < 0:
+ # raise Exception("Sorry, no numbers below zero")
+
+# xj = "hello"
+# if not type(xj) is int:
+  # raise TypeError("Only integers are allowed")  
+
+# username = input("Enter username:")
+# print("Username is" + username)
+
+import numpy as np
+arr = np.array([[1,2,3,4],[5,6,7,8]])
+print('2nd elements on 1st array:' ,arr[0,1])
